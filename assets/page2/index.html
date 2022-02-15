@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page 3</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="flex-row" id="container">
+    <form class="flex-col">
+      <h4>Payment</h4>
+      <div class="radio">
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">Visa / master card</label>
+      </div>
+      <div class="radio">
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">Credit card</label>
+      </div>
+      <h4>Billing</h4>
+      <input type="text" placeholder="Name on card" />
+      <input type="number" placeholder="Card number" />
+      <input type="month" placeholder="Expiry date" />
+      <input type="number" placeholder="CVV" />
+      <div class="button-container">
+        <button>Pay</button>
+      </div>
+    </form>
+    <div class="flex-col" id="overview-card">
+      <div class="subtotal-container">
+        <div class="subtotal text">Subtotal</div>
+      </div>
+      <div class="taxes-container">
+        <div class="taxes text">Taxes</div>
+      </div>
+      <div class="shipping-container">
+        <div class="shipping text">Shipping</div>
+      </div>
+      <div class="total-container">
+        <div class="total text">Total</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
