@@ -145,3 +145,124 @@ table {
 
 
 /* Begin site styles below */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#overview-card {
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 5px 5px grey;
+    min-height: 60vh;
+    max-height: 80vh;
+    font-size: 1.3em;
+    min-width: 20vw;
+    max-width: 50vw;
+    padding: 1em 0.3em;
+}
+
+#overview-card .text {
+    display: block;
+    border: 2px solid darkgrey;
+    border-radius: 5px;
+    box-shadow: 2px 2px darkgray;
+    color: #444;
+    padding: 0.5em 0.5em;
+    margin: 0.4em 1.2em;
+    text-align: left;
+    background-color: white;
+}
+
+#overview-card .total-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#container {
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#container form {
+    min-width: 25vw;
+    max-width: 50vw;
+}
+
+#container form input {
+    border: 1px solid grey;
+    box-shadow: 1px 1px grey;
+    padding: 8px 8px;
+    margin: 5px;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+#container form h4 {
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+#container form .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#container form button {
+    border-radius: 100px;
+    border: 2px solid grey;
+    padding: 8px 30px;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    background-color: grey;
+    color: white;
+    font-size: 22px;
+}
+
+#container form .radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#container form .radio > label {
+    font-size: 18px;
+    color: #444;
+    margin-left: 10px;
+    border: 2px solid lightgrey;
+    padding: 0.5em 0.8em;
+    margin: 0.5em;
+}
+
+#container form .radio label {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#container form .radio input[type=radio]:checked ~ label {
+    background-color: lightblue;
+    border-color: cornflowerblue;
+}
