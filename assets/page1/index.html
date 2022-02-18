@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <div class="flex-row" id="container">
+  <div id="container">
     <form class="flex-col">
       <h4>Shipping Method</h4>
       <div class="radio">
-        <input type="radio" id="shipping-method1" name="shipping-method" value="standard">
+        <input type="radio" id="shipping-method1" name="shipping-method" value="standard" required>
         <label for="shipping-method1">
           <div>Standard</div>
           <div>7-DAY</div>
@@ -33,6 +33,9 @@
         </label>
       </div>
       <div class="button-container">
+        <a href="/">
+          <button type="button" class="back-btn" id="back_btn">Back</button>
+        </a>
         <a href="/page2/">
           <button id="continue-btn">Continue to payment</button>
         </a>
@@ -53,5 +56,7 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript" src="../index.js"></script>
 </body>
 </html>
