@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="../css/screen.css">
 </head>
 <body>
+  <img id="logo" src="../img/logo.png" />
   <div id="container">
-    <form class="flex-col">
+    <form class="flex-col" action='../../assets/page2/'>
+      <h6>Information > Shipping > Payment</h6>
       <h4>Shipping Method</h4>
       <div class="radio">
         <input type="radio" id="shipping-method1" name="shipping-method" value="standard" required>
@@ -33,11 +35,11 @@
         </label>
       </div>
       <div class="button-container">
-        <a href="../">
+        <a href="../../">
           <button type="button" class="back-btn" id="back_btn">Back</button>
         </a>
-        <a href="./assets/page2/">
-          <button id="continue-btn">Continue to payment</button>
+        <a href="../../assets/page2/">
+          <input type="submit" id="continue-btn" value="Continue to payment" />
         </a>
       </div>
     </form>
