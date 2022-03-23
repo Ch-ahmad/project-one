@@ -147,7 +147,11 @@ table {
 /* Begin site styles below */
 
 
-body {
+ul {
+    list-style-type: none;
+}
+
+main {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -162,6 +166,10 @@ body {
 .flex-col {
     display: flex;
     flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
 }
 
 #overview-card {
@@ -209,14 +217,58 @@ body {
     max-width: 50vw;
 }
 
-#container form input {
+#container form input:not([type="radio"]) {
     border: 1px solid rgb(83,41, 119);
     box-shadow: 2px 2px rgb(83,41, 119);
-    padding: 8px 8px;
+    padding: 8px 12px;
     margin: 5px;
     border-radius: 5px;
     font-size: 18px;
+
+    transition: all ease-in-out 0.3s;
 }
+
+input[type="radio"] {
+    box-shadow: none;
+}
+
+#container form p input {
+    position: relative;
+    width: 100%;
+}
+
+#container form p {
+    display: block;
+}
+
+#container form p input + label {
+    position: absolute;
+    transform-origin: top left;
+    transform: translateY(-185%) translateX(20px);
+    font-size: 18px;
+
+    transition: all ease 0.4s;
+}
+
+#container form p input {
+    color: transparent;
+}
+
+#container form p input:focus + label, #container form p .input-filled + label {
+    transform: translateY(-300%) translateX(15px) scale(0.8);
+    font-weight: bolder;
+    color: #444;
+}
+
+#container form p .input-filled + label {
+    color: rgb(83,41, 119);
+}
+
+#container form p input:focus, #container form p .input-filled {
+    padding-top: 25px;
+    color: black;
+}
+
 
 #container form input:focus {
     outline: none;
@@ -248,6 +300,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+#container form .button-container button:hover {
+    cursor: pointer;
 }
 
 #container form button, #container form input[type=submit] {
@@ -296,6 +352,15 @@ body {
     margin-right: 10px;
 }
 
+#logo-container {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
 #logo {
     margin-left: auto;
     margin-right: auto;
@@ -326,3 +391,7 @@ body {
         height: auto;
     }
 }
+
+
+
+
