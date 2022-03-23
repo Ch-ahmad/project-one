@@ -1,19 +1,21 @@
 let path = window.location.pathname;
 if(!path.endsWith('/')) { path += '/'; }
 
-if(path === '/page2/') {
-    let pay_btn = document.getElementById("pay_btn");
 
-    pay_btn.onclick = () => {
+let final_form = document.getElementById("final_form");
+if(final_form) {
+    final_form.onsubmit = e => {
+        e.preventDefault();
         alert("Success!");
     }
 }
 
 let inputs = document.getElementsByTagName("input");
-console.log(inputs);
+
+
 for(let i=0; i<inputs.length; i++) {
     inputs[i].onchange = function() {
-        console.log("FIRED!")
+        
         let inp = inputs[i];
         if(inp.value === "") {
             inp.classList.remove("input-filled");
@@ -24,5 +26,4 @@ for(let i=0; i<inputs.length; i++) {
         }
     }
 }
-
 
